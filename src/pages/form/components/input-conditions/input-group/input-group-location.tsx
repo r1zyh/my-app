@@ -12,7 +12,7 @@ export function InputGroupLocation() {
           name="region-name"
         />
       </div>
-      <div className="input__item conditions" id="address">
+      <div className="input__item conditions address">
         <label htmlFor="address" className="input__label">
           Адрес
         </label>

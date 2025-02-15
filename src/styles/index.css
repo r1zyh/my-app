@@ -167,37 +167,37 @@ body {
     gap: 20px;
     justify-content: center;
     flex-wrap: nowrap;
-  }
+}
 
-  .vacancy__salary strong {
+.vacancy__salary strong {
     font-size: 1.25em;
     line-height: 24px;
     font-weight: 700;
     color: #4C73E3;
-  }
+}
   
-  .vacancy__experience strong {
+.vacancy__experience strong {
     font-size: 1em;
     line-height: 16px;
     font-weight: 700;
     color: #4C73E3;
-  }
+}
 
-  .vacancy__text {
+.vacancy__text {
     font-size: 0.875em;
     line-height: 16.8px;
     margin: 5px 0;
     margin-right: 5px;
     width: fit-content;
-  }
+}
 
  /* Метро  */
 
-  .vacancy__metro {
+.vacancy__metro {
     display: flex;
     align-items: center;
     gap: 5px;   
-  }
+}
 
 .vacancy__metro--text {
     font-weight: 400;
@@ -233,11 +233,27 @@ body {
     gap: 60px;
 }
 
+.input__group.conditions.salary {
+    flex-direction: column;
+    gap: 16px;
+}
+
 .input__item {
     display: flex;
     flex-direction: column;
     width: 275px;
   }
+
+.input__item.salary {
+    width: 100px;
+    flex-direction: row;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19.36px;
+    color: #4F4F55;
+    gap: 7px
+}
 
 .input__item.criteria {
     width: 100%;
@@ -262,6 +278,10 @@ body {
     height: 100px;
     width: 100%;
     resize: none;
+}
+
+.input__field.salary {
+    width: 100px;
 }
 
 .input__field.criteria::placeholder {
@@ -332,9 +352,13 @@ body {
     display: flex;
     flex-direction: column;
     gap: 12px;
-  }
+}
+
+.radio__container.salary {
+    flex-direction: row;
+}
   
-  .radio__option {
+.radio__option {
     display: flex;
     align-items: center;
     font-size: 16px;
@@ -343,13 +367,13 @@ body {
     color: #4F4F55;
     cursor: pointer;
     gap: 8px;
-  }
+}
   
-  .radio__option input {
+.radio__option input {
     display: none;
-  }
+}
   
-  .custom__radio {
+.custom__radio {
     width: 20px;
     height: 20px;
     border: 1px solid #4C73E3;
@@ -358,17 +382,29 @@ body {
     justify-content: center;
     align-items: center;
     transition: background 0.3s ease;
-  }
+}
   
-  .radio__option input:checked + .custom-radio {
+.radio__option input:checked + .custom-radio {
     background-color: #4C73E3;
     box-shadow: inset 0 0 0 4px #ffffff;
-  }
+}
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
  
-  .input__item.conditions#address {
+.input__item.conditions.address {
     width: 420px;
-  }
+}
 
 @media (min-width: 1600px) {
   .vacancy {
