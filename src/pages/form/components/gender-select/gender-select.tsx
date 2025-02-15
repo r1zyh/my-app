@@ -7,10 +7,11 @@ export function GenderSelect() {
     <div className="input__item radio">
       <label className="input-label">Пол</label>
       <div className="gender__container">
-        <label className="gender__option">
+        <label className="gender__option" htmlFor="male">
           <input
             type="radio"
-            name="gender"
+            name="gender-male"
+            id="male"
             value="male"
             checked={selectedGender === "male"}
             onChange={() => setSelectedGender("male")}
@@ -22,10 +23,11 @@ export function GenderSelect() {
           </span>
           Мужской
         </label>
-        <label className="gender__option">
+        <label className="gender__option" htmlFor="female">
           <input
             type="radio"
-            name="gender"
+            name="gender-female"
+            id="female"
             value="female"
             checked={selectedGender === "female"}
             onChange={() => setSelectedGender("female")}

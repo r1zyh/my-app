@@ -8,7 +8,7 @@ export function InputGroupRadio() {
     setSelectedValue(e.target.value);
   };
   return (
-    <div className="input__group radio">
+    <fieldset className="input__group radio">
       <GenderSelect />
       <div className="input__item">
         <label htmlFor="education" className="input-label">
@@ -22,6 +22,7 @@ export function InputGroupRadio() {
           id="education"
           defaultValue=""
           onChange={handleSelectChange}
+          name="candidate-education"
         >
           <option value="" hidden>
             Выберите
@@ -31,6 +32,6 @@ export function InputGroupRadio() {
           <option value="higher">Высшее</option>
         </select>
       </div>
-    </div>
+    </fieldset>
   );
 }
