@@ -1,6 +1,7 @@
 import { ChangeEvent, JSX, useState } from "react";
 import { Header } from "../../components/header/header";
 import { Container } from "../../components/container";
+import GenderSelect from "./gender-select";
 
 export function Form(): JSX.Element {
   const [selectedValue, setSelectedValue] = useState("");
@@ -67,7 +68,8 @@ export function Form(): JSX.Element {
             </div>
           </div>
 
-          <div className="input__group">
+          <div className="input__group radio">
+            <GenderSelect />
             <div className="input__item">
               <label htmlFor="education" className="input-label">
                 Образование

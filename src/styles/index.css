@@ -223,8 +223,11 @@ body {
 .input__group {
     display: flex;
     gap: 40px;
-    width: 100%;
-  }
+}
+
+.input__group.radio {
+    gap: 60px;
+}
 
 .input__item {
     display: flex;
@@ -247,6 +250,24 @@ body {
     outline: none;
 }
 
+/* дата  */
+
+.input__date {
+    width: 100%;
+}
+
+.input__date::placeholder {
+    color: #DCDCDC;
+  }
+
+.input__date::-webkit-datetime-edit {
+    color: #DCDCDC;
+}
+
+.input__date::-moz-placeholder {
+    color: #DCDCDC;
+}
+
 /* селект */
 
 .input__field.select {
@@ -256,10 +277,6 @@ body {
     background-position: right 20px center;
     padding: 10px 0;
     padding-left: 20px;
-}
-
-.input__date {
-    width: 100%;
 }
 
 .input__field:focus {
@@ -273,7 +290,52 @@ body {
 
 .input__field option {
     color: #000;
+}
+
+/* выбор пола */
+
+.input__item.radio {
+    width: fit-content;
+}
+
+.gender__container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 16px;
   }
+  
+  .gender__option {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 19.36px;
+    color: #4F4F55;
+    cursor: pointer;
+    gap: 8px;
+  }
+  
+  .gender__option input {
+    display: none;
+  }
+  
+  .custom-radio {
+    width: 20px;
+    height: 20px;
+    border: 1px solid #4C73E3;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.3s ease;
+  }
+  
+  .gender__option input:checked + .custom-radio {
+    background-color: #4C73E3;
+    box-shadow: inset 0 0 0 4px #ffffff;
+  }
+  
 
 
 @media (min-width: 1600px) {
