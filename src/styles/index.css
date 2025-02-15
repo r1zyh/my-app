@@ -407,10 +407,10 @@ body {
 }
 
 @media (min-width: 1600px) {
-  .vacancy {
-    width: 1600px;
-  }
-
+    
+    .container {
+     padding: 0 250px;
+    }
   .input__container {
     width: 1600px;
   }
