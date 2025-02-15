@@ -1,6 +1,6 @@
 import { JSX } from "react";
 import { Header } from "../../components/header/header";
-import { Container } from "./ui/container";
+import { Container } from "../../components/container";
 import { VacancySection } from "../../components/vacancy-section";
 
 export function Main(): JSX.Element {

@@ -1,6 +1,6 @@
 import { JSX } from "react";
-import { VacancyHeader } from "./ui/vacancy-header";
-import { VacancyInfo } from "./ui/vacancy-info";
+import { VacancyHeader } from "./vacancy-header";
+import { VacancyInfo } from "./vacancy-info";
 
 export function VacancyListItem(): JSX.Element {
   return (
