@@ -2,12 +2,12 @@
 
 
 body {
-    width: 1600px;
     background-color: #F3F7F8;
     font-size: 16px;
 }
 
 .container {
+    width: 1600px;
     padding: 0 150px;
 }
 
@@ -204,4 +204,84 @@ body {
     line-height: 19.2px;
     color: #4F4F55;
     opacity: 0.8;
+}
+
+/* страница формы */
+
+.input__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-bottom: 32px;
+    background-color: #FFFFFF;
+    padding: 60px;
+    border-radius: 16px;
+}
+
+.input__group {
+    display: flex;
+    gap: 40px;
+    width: 100%;
+  }
+
+.input__item {
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+  }
+
+.input__label {
+    font-weight: 600;
+    font-size: 0.875em;
+    line-height: 16.94px;
+    margin-bottom: 8px;
+}
+
+.input__field {
+    border: 1px solid #DEE4F0;
+    border-radius: 16px;
+    padding: 12px 20px;
+    transition: border-color 0.3s ease;
+    outline: none;
+}
+
+/* селект */
+
+.input__field.select {
+    appearance: none;
+    background-image: url('/src/assets/icons/Swich.svg');
+    background-repeat: no-repeat;
+    background-position: right 20px center;
+    padding: 10px 0;
+    padding-left: 20px;
+}
+
+.input__date {
+    width: 100%;
+}
+
+.input__field:focus {
+    border-color:  #4C73E3;
+    outline: none;
+}
+
+.input__field.select.placeholder {
+    color: #DCDCDC;
+}
+
+.input__field option {
+    color: #000;
+  }
+
+
+@media (min-width: 1600px) {
+  .vacancy {
+    width: 1600px;
+  }
+
+  .input__container {
+    width: 1600px;
+  }
 }

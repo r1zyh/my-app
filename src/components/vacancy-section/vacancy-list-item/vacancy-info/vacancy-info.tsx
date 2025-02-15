@@ -15,7 +15,7 @@ export function VacancyInfo(): JSX.Element {
 
         <div className="vacancy__metro">
           <img
-            src="/src/assets/icons/Metro Тестовое задание.svg "
+            src="/src/assets/icons/Metro.svg"
             alt="Метро"
             className="vacancy__metro-icon"
           />

@@ -6,7 +6,7 @@ export function VacancyHeader(): JSX.Element {
       <span className="vacancy__date">Дата публикации: 23.01.2023</span>
       <button className="vacancy__edit">
         <img
-          src="/src/assets/icons/Тестовое задание ФКУ Налог-Сервис ред.svg"
+          src="/src/assets/icons/Edit.svg.svg"
           alt="кнопка редактировать"
           className="vacancy__edit--icon"
         />

@@ -11,7 +11,7 @@ export function VacancyListItem(): JSX.Element {
 
         <div className="vacancy__location">
           <img
-            src="/src/assets/icons/Map Pin ФКУ Налог-Сервис адрес.svg"
+            src="/src/assets/icons/MapPin.svg"
             alt="иконка адрес"
             className="vacancy__location--icon"
           />
