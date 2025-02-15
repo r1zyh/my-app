@@ -35,6 +35,25 @@ export function InputCriteria() {
             placeholder="Дополнительные специальные навыки"
           />
         </div>
+        <div className="input__item criteria">
+          <label htmlFor="offer" className="input__label">
+            Мы предлагаем
+          </label>
+          <ul className="input__field list">
+            <li className="list__item">
+              Дружный коллектив, интересные задачи и возможность быть
+              услышанным;
+            </li>
+            <li className="list__item">
+              Приобретение навыков работы в большой, разветвлённой и
+              сложноподчинённой структуре, задействованной в сфере ИТ;
+            </li>
+            <li className="list__item">Оформление в соответствии с ТК РФ;</li>
+            <li className="list__item">
+              Полностью официальная заработная плата
+            </li>
+          </ul>
+        </div>
       </fieldset>
     </div>
   );
