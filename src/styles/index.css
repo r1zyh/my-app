@@ -261,6 +261,11 @@ body {
 .input__field.criteria {
     height: 100px;
     width: 100%;
+    resize: none;
+}
+
+.input__field.criteria::placeholder {
+    color: #DCDCDC;
 }
 
 /* дата  */
@@ -348,8 +353,11 @@ body {
     background-color: #4C73E3;
     box-shadow: inset 0 0 0 4px #ffffff;
   }
-  
 
+ 
+  .input__item.conditions#address {
+    width: 420px;
+  }
 
 @media (min-width: 1600px) {
   .vacancy {
