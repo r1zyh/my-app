@@ -4,6 +4,7 @@
 body {
     width: 1600px;
     background-color: #F3F7F8;
+    font-size: 16px;
 }
 
 .container {
@@ -85,11 +86,122 @@ body {
     padding: 16px 28px;
     border-radius: 16px;
     background-color: #FFFFFF;
+    margin-bottom: 20px;
 }
 
+/* Хедер вакансии с датой и кнопкой редактировать */
+
+.vacancy__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.vacancy__date {
+    color: #4F4F55;
+    font-size: 0.875em;
+    line-height: 16.8px;
+    opacity: 0.6;
+    margin-bottom: 28px;
+}
+
+.vacancy__edit {
+    background: none;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.vacancy__edit--icon {
+    width: 24px;
+    height: 24px;
+}
+
+/* Название вакансии */
 
 .vacancy__inner--title {
     font-weight: 700;
     font-size: 25px;
     color: #4F4F55;
+    margin-bottom: 12px;
+}
+
+/* Расположение вакансии */
+
+.vacancy__location {
+    display: flex;
+    align-items: center ;
+    gap: 5px;
+}
+
+.vacancy__location-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+.vacancy__address {
+    font-size: 1em;
+    line-height: 19.2px;
+    opacity: 0.8;
+    color: #4F4F55;
+    width: fit-content;
+    text-wrap: nowrap;
+}
+
+/* О вакансии: зп, опыт, метро */
+
+.vacancy__info {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+ /* Детали о вакансии  */
+
+.vacancy__details {
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: nowrap;
+  }
+
+  .vacancy__salary strong {
+    font-size: 1.25em;
+    line-height: 24px;
+    font-weight: 700;
+    color: #4C73E3;
+  }
+  
+  .vacancy__experience strong {
+    font-size: 1em;
+    line-height: 16px;
+    font-weight: 700;
+    color: #4C73E3;
+  }
+
+  .vacancy__text {
+    font-size: 0.875em;
+    line-height: 16.8px;
+    margin: 5px 0;
+    margin-right: 5px;
+    width: fit-content;
+  }
+
+ /* Метро  */
+
+  .vacancy__metro {
+    display: flex;
+    align-items: center;
+    gap: 5px;   
+  }
+
+.vacancy__metro--text {
+    font-weight: 400;
+    line-height: 19.2px;
+    color: #4F4F55;
+    opacity: 0.8;
 }
