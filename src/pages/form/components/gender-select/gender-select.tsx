@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 export function GenderSelect() {
-  const [selectedGender, setSelectedGender] = useState<string>("");
+  const [selectedGender, setSelectedGender] = useState("");
 
   return (
     <div className="input__item radio">
@@ -41,5 +41,3 @@ export function GenderSelect() {
     </div>
   );
 }
-
-export default GenderSelect;

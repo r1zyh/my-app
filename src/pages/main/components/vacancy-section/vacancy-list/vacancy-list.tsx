@@ -1,7 +1,6 @@
-import { JSX } from "react";
 import { VacancyListItem } from "../vacancy-list-item/vacancy-list-item";
 
-export function VacancyList(): JSX.Element {
+export function VacancyList() {
   return (
     <ul className="vacancy__list">
       <VacancyListItem />

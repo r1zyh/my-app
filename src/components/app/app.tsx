@@ -1,9 +1,9 @@
-import { JSX } from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { AppRoute } from "../../const";
 import { Form } from "../../pages/form";
 import { Main } from "../../pages/main";
-export function App(): JSX.Element {
+
+export function App() {
   return (
     <BrowserRouter>
       <Routes>

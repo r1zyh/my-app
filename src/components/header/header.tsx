@@ -1,9 +1,8 @@
-import { JSX } from "react";
 import { Link } from "react-router-dom";
 import { AppRoute } from "../../const";
 import { useLocation } from "react-router-dom";
 
-export function Header(): JSX.Element {
+export function Header() {
   const location = useLocation();
   return (
     <header className="header">

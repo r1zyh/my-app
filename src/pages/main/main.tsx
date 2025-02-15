@@ -1,9 +1,8 @@
-import { JSX } from "react";
 import { Header } from "../../components/header/header";
-import { Container } from "../../components/container";
-import { VacancySection } from "../../components/vacancy-section";
+import { Container } from "../../components/page-container/page-container";
+import { VacancySection } from "./components/vacancy-section";
 
-export function Main(): JSX.Element {
+export function Main() {
   return (
     <>
       <Header />

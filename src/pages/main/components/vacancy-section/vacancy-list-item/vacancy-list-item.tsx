@@ -1,8 +1,7 @@
-import { JSX } from "react";
 import { VacancyHeader } from "./vacancy-header";
 import { VacancyInfo } from "./vacancy-info";
 
-export function VacancyListItem(): JSX.Element {
+export function VacancyListItem() {
   return (
     <li className="vacancy__list--item">
       <article className="vacancy__inner">

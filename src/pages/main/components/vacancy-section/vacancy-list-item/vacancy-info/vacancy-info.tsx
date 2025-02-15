@@ -1,6 +1,4 @@
-import { JSX } from "react";
-
-export function VacancyInfo(): JSX.Element {
+export function VacancyInfo() {
   return (
     <div className="vacancy__info">
       <div className="vacancy__details">
