@@ -2,7 +2,7 @@ import {
   InputGroupRadio,
   InputGroupSelect,
   InputGroupVacancy,
-} from "../input-group";
+} from "./input-group";
 
 export function InputGeneral() {
   return (

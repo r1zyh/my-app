@@ -1,5 +1,5 @@
 import { ChangeEvent, useState } from "react";
-import { GenderSelect } from "../gender-select";
+import { GenderSelect } from "../../gender-select";
 
 export function InputGroupRadio() {
   const [selectedValue, setSelectedValue] = useState("");

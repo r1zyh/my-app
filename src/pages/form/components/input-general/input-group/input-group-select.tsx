@@ -2,7 +2,7 @@ export function InputGroupSelect() {
   return (
     <div className="input__group date">
       <div className="input__item">
-        <label htmlFor="open-date" className="input-label">
+        <label htmlFor="open-date" className="input__label">
           Дата открытия
         </label>
         <div className="custom__date">
@@ -14,7 +14,7 @@ export function InputGroupSelect() {
         </div>
       </div>
       <div className="input__item">
-        <label htmlFor="close-date" className="input-label">
+        <label htmlFor="close-date" className="input__label">
           Плановая дата закрытия
         </label>
         <div className="custom__date">
