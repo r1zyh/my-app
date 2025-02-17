@@ -2,8 +2,8 @@ import { useFormikContext } from "formik";
 
 export function InputGroupSelect() {
   const { values, setFieldValue, errors, touched } = useFormikContext<{
-    open: string;
-    close: string;
+    openDate: string;
+    closeDate: string;
   }>();
 
   return (
@@ -17,13 +17,13 @@ export function InputGroupSelect() {
             type="date"
             className="input__field input__date"
             id="open"
-            name="open"
-            value={values.open}
-            onChange={(e) => setFieldValue("open", e.target.value)}
+            name="openDate"
+            value={values.openDate ? values.openDate.slice(0, 10) : ""}  
+            onChange={(e) => setFieldValue("openDate", e.target.value)}
           />
         </div>
-        {touched.open && errors.open && (
-          <div className="error-message">{errors.open}</div>
+        {touched.openDate && errors.openDate && (
+          <div className="error__message">{errors.openDate}</div>
         )}
       </div>
 
@@ -36,13 +36,13 @@ export function InputGroupSelect() {
             type="date"
             className="input__field input__date"
             id="close"
-            name="close"
-            value={values.close}
-            onChange={(e) => setFieldValue("close", e.target.value)}
+            name="closeDate"
+            value={values.closeDate ? values.closeDate.slice(0, 10) : ""}
+            onChange={(e) => setFieldValue("closeDate", e.target.value)}
           />
         </div>
-        {touched.close && errors.close && (
-          <div className="error-message">{errors.close}</div>
+        {touched.closeDate && errors.closeDate && (
+          <div className="error__message">{errors.closeDate}</div>
         )}
       </div>
     </fieldset>

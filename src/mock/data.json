@@ -4,7 +4,7 @@
     "jobTitle": "какая-то должность",
     "vacancyName": "Backend-разработчик",
     "department": "какой-то отдел",
-    "salary": "70000",
+    "handsOrBills": "hands",
     "salaryFromTo": {
       "from": "50000",
       "to": "70000"
@@ -32,7 +32,7 @@
     "jobTitle": "какая-то должность",
     "vacancyName": "Backend-разработчик",
     "department": "какой-то отдел",
-    "salary": "70000",
+    "handsOrBills": "hands",
     "salaryFromTo": {
       "from": "50000",
       "to": "70000"
@@ -42,7 +42,7 @@
     "gender": "мужской",
     "education": "Среднее",
     "region": "какой-то регион",
-    "address": "какой-то адрес",
+    "address": "Походный проезд, 3с1",
     "metro": "Новослободская",
     "experience": "3 года",
     "experienceRequirements": {
@@ -64,9 +64,9 @@
   {
     "id": 31169,
     "jobTitle": "какая-то должность",
-    "vacancyName": "Backend-разработчик",
+    "vacancyName": "Frontend-разработчик",
     "department": "какой-то отдел",
-    "salary": "70000",
+    "handsOrBills": "bills",
     "salaryFromTo": {
       "from": "50000",
       "to": "70000"
@@ -95,7 +95,7 @@
     "jobTitle": "какая-то должность",
     "vacancyName": "Backend-разработчик",
     "department": "какой-то отдел",
-    "salary": "90000",
+    "handsOrBills": "bills",
     "salaryFromTo": {
       "from": "50000",
       "to": "70000"

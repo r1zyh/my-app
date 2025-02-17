@@ -406,6 +406,22 @@ body {
     width: 420px;
 }
 
+/* ошибка */
+
+.input__error {
+    border: 2px solid red;
+    border-radius: 12px;
+    background-color: white;
+    padding: 10px;
+  }
+  
+.error__message {
+    color: red;
+    font-size: 14px;
+    margin-top: 4px;
+  }
+  
+
 @media (min-width: 1600px) {
     
     .container {

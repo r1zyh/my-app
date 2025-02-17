@@ -1,9 +1,13 @@
 type TVacancyInfo = {
-  salary: string;
-  experienceRequirements: {
+  salary?: {
     from: string;
     to: string;
   };
+  experienceRequirements: string;
+  // {
+  //   from: string;
+  //   to: string;
+  // };
   address: string;
 };
 
@@ -16,13 +20,14 @@ export function VacancyInfo({
     <div className="vacancy__info">
       <div className="vacancy__details">
         <span className="vacancy__salary">
-          <strong>от {salary}</strong>{" "}
+          <strong>от {salary?.from}</strong>{" "}
           <span className="vacancy__text">на руки</span>
         </span>
         <span className="vacancy__experience">
           <span className="vacancy__text">Требуемый опыт:</span>
           <strong>
-            от {experienceRequirements.from} до {experienceRequirements.to} лет
+            от {Number.parseInt(experienceRequirements)} до{" "}
+            {Number.parseInt(experienceRequirements)} лет
           </strong>
         </span>
 

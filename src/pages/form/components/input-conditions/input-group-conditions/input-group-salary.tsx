@@ -1,4 +1,18 @@
+import { useFormikContext } from "formik";
+import { TOffer } from "../../../../../state/type";
+
 export function InputGroupSalary() {
+  const { values, setFieldValue } = useFormikContext<TOffer>();
+
+  const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFieldValue(e.target.name, e.target.value);
+  };
+
+  const handleSalaryChange = (e: React.ChangeEvent<HTMLInputElement>, field: string) => {
+    const value = e.target.value;
+    setFieldValue(`salaryFromTo.${field}`, value);
+  };
+
   return (
     <fieldset className="input__group conditions salary">
       <div className="input__item radio">
@@ -7,28 +21,32 @@ export function InputGroupSalary() {
           <label className="radio__option salary" htmlFor="hands-salary">
             <input
               type="radio"
-              name="salary-before"
+              name="handsOrBills"
               id="hands-salary"
-              value="hands-salary"
+              value="hands"
+              checked={values.handsOrBills === "hands"}
+              onChange={handleRadioChange}
             />
             <span className="custom__radio">
-              {/* {selected === "male" && (
-                  <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
-                )} */}
+              {values.handsOrBills === "hands" && (
+                <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+              )}
             </span>
             На руки
           </label>
           <label className="radio__option salary" htmlFor="bills-salary">
             <input
               type="radio"
-              name="salary-after"
+              name="handsOrBills"
               id="bills-salary"
-              value="bills-salary"
+              value="bills"
+              checked={values.handsOrBills === "bills"}
+              onChange={handleRadioChange}
             />
             <span className="custom__radio">
-              {/* {selectedGender === "female" && (
-                  <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
-                )} */}
+              {values.handsOrBills === "bills" && (
+                <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+              )}
             </span>
             До вычета налогов
           </label>
@@ -38,7 +56,7 @@ export function InputGroupSalary() {
       <div className="input__group salary">
         <div className="input__item salary">
           <label
-            htmlFor="salary"
+            htmlFor="salary-before"
             className="input__label salary visually-hidden"
           >
             от
@@ -47,13 +65,15 @@ export function InputGroupSalary() {
           <input
             type="text"
             className="input__field salary"
-            name="salary-before"
-            id="salary"
+            name="salaryFrom"
+            id="salary-before"
+            value={values.salaryFromTo?.from || ""}
+            onChange={(e) => handleSalaryChange(e, "from")}
           />
         </div>
         <div className="input__item salary">
           <label
-            htmlFor="salary"
+            htmlFor="salary-after"
             className="input__label salary visually-hidden"
           >
             до
@@ -62,8 +82,10 @@ export function InputGroupSalary() {
           <input
             type="text"
             className="input__field salary"
-            name="salary-after"
-            id="bill-salary"
+            name="salaryTo"
+            id="salary-after"
+            value={values.salaryFromTo?.to || ""}
+            onChange={(e) => handleSalaryChange(e, "to")}
           />
         </div>
       </div>

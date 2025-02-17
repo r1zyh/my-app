@@ -22,7 +22,6 @@ export function InputGroupLocation() {
           name="region"
           value={values.region}
           onChange={handleInputChange("region")}
-          required
         />
       </div>
       <div className="input__item conditions address">
@@ -36,7 +35,6 @@ export function InputGroupLocation() {
           name="address"
           value={values.address}
           onChange={handleInputChange("address")}
-          required
         />
       </div>
       <div className="input__item conditions">

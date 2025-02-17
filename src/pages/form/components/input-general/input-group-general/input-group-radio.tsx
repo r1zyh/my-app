@@ -28,7 +28,6 @@ export function InputGroupRadio() {
           onChange={handleSelectChange}
           name="education"
           title="education"
-          required
         >
           <option value="" hidden>
             Выберите

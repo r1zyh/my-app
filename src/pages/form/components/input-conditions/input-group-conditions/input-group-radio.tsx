@@ -24,7 +24,6 @@ export function InputRadioConditions() {
           name="experience"
           value={values.experience}
           onChange={handleInputChange("experience")}
-          required
         />
       </div>
       <div className="input__item">
@@ -37,7 +36,6 @@ export function InputRadioConditions() {
           name="schedule"
           value={values.schedule}
           onChange={handleInputChange("schedule")}
-          required
         >
           <option value="" hidden>
             Выберите

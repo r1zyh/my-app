@@ -1,10 +1,10 @@
 export type TOffer = {
   id: number;
-  jobTitle: string;
+  jobTitle?: string;
   vacancyName: string;
   department: string;
-  salary: string;
-  salaryFromTo: {
+  handsOrBills?: string;
+  salaryFromTo?: {
     from: string;
     to: string;
   };
@@ -13,18 +13,18 @@ export type TOffer = {
   gender: string;
   region: string;
   address: string;
-  metro: string;
+  metro?: string;
   education: string;
   experience: string;
-  experienceRequirements: {
-    from: string;
-    to: string;
-  };
+  // experienceRequirements?: {
+  //   from: string;
+  //   to: string;
+  // };
   schedule: string;
   employmentType: string;
-  duties: string;
-  wishes: string;
-  advantages: string[];
+  duties?: string;
+  wishes?: string;
+  advantages?: string[];
 };
 
 export type TOffersState = {

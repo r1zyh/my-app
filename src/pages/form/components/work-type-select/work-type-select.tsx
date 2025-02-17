@@ -21,31 +21,43 @@ export function WorkTypeSelect() {
             checked={values.employmentType === "full-work"}
             onChange={handleRadioChange}
           />
-          <span className="custom__radio"></span>
+          <span className="custom__radio">
+            {values.employmentType === "full-work" && (
+              <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+            )}
+          </span>
           Полная занятость
         </label>
         <label className="radio__option work" htmlFor="part-work">
           <input
             type="radio"
-            name="employmentType" // Привязка к полю в Formik
+            name="employmentType"
             id="part-work"
             value="part-work"
             checked={values.employmentType === "part-work"}
             onChange={handleRadioChange}
           />
-          <span className="custom__radio"></span>
+          <span className="custom__radio">
+            {values.employmentType === "part-work" && (
+              <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+            )}
+          </span>
           Частичная занятость
         </label>
         <label className="radio__option work" htmlFor="internship">
           <input
             type="radio"
-            name="employmentType" // Привязка к полю в Formik
+            name="employmentType"
             id="internship"
             value="internship"
             checked={values.employmentType === "internship"}
             onChange={handleRadioChange}
           />
-          <span className="custom__radio"></span>
+          <span className="custom__radio">
+            {values.employmentType === "internship" && (
+              <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+            )}
+          </span>
           Стажировка
         </label>
       </div>

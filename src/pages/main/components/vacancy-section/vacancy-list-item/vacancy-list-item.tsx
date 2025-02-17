@@ -1,13 +1,19 @@
 import { TOffer } from "../../../../../state/type";
 import { VacancyHeader } from "./vacancy-header";
-import { VacancyInfo } from "./vacancy-info";
+import { VacancyInfo } from "./vacancy-info/vacancy-info";
 
 type TVacancyListItem = {
   offer: TOffer;
 };
 
 export function VacancyListItem({ offer }: TVacancyListItem) {
-  const { vacancyName, openDate, salary, address, experienceRequirements } = offer;
+  const {
+    vacancyName,
+    openDate,
+    address,
+    experience,
+    salaryFromTo,
+  } = offer;
   return (
     <li className="vacancy__list--item">
       <article className="vacancy__inner">
@@ -22,7 +28,11 @@ export function VacancyListItem({ offer }: TVacancyListItem) {
           />
           <span className="vacancy__address">{address}</span>
 
-          <VacancyInfo salary={salary} experienceRequirements={experienceRequirements} address={address} />
+          <VacancyInfo
+            salary={salaryFromTo}
+            experienceRequirements={experience}
+            address={address}
+          />
         </div>
       </article>
     </li>

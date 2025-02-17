@@ -5,32 +5,55 @@ import { InputConditions } from "./components/input-conditions";
 import { InputCriteria } from "./components/input-criteria";
 import { InputGeneral } from "./components/input-general";
 import { validationSchema } from "./const";
-
+import { TOffer } from "../../state/type";
+import { useOffersContext } from "../../hooks/useOffersContext";
 
 export function VacancyForm() {
+  const { dispatch } = useOffersContext();
   const initialValues = {
     vacancyName: "",
+    jobTitle: "",
     department: "",
-    salary: "",
+    handsOrBills: "",
+    salaryFromTo: {
+      from: "",
+      to: "",
+    },
     openDate: "",
     closeDate: "",
     gender: "",
     region: "",
     address: "",
+    metro: "",
     education: "",
     experience: "",
-    experienceRequirements: {
-      from: "",
-      to: "",
-    },
+    // experienceRequirements: {
+    //   from: "",
+    //   to: "",
+    // },
     location: "",
     schedule: "",
     employmentType: "",
+    duties: "",
+    wishes: "",
+    advantages: [],
   };
 
-  const handleSubmit = (values: typeof initialValues) => {
-    console.log("Form Data:", values);
+  const handleSubmit = (
+    values: typeof initialValues,
+    { resetForm }: { resetForm: () => void }
+  ) => {
+    const newOffer: TOffer = {
+      id: +(Math.random() * 1).toFixed(5),
+      ...values,
+    };
+    dispatch({
+      type: "ADD_OFFER",
+      offer: newOffer,
+    });
+    resetForm();
   };
+
   return (
     <>
       <Header />
