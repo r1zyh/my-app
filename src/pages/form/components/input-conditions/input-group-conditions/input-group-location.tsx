@@ -1,4 +1,14 @@
+import { useFormikContext } from "formik";
+import { TOffer } from "../../../../../state/type";
+
 export function InputGroupLocation() {
+  const { values, setFieldValue } = useFormikContext<TOffer>();
+
+  const handleInputChange =
+    (field: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
+      setFieldValue(field, e.target.value);
+    };
+
   return (
     <fieldset className="input__group conditions location">
       <div className="input__item conditions">
@@ -9,7 +19,10 @@ export function InputGroupLocation() {
           type="text"
           className="input__field conditions"
           id="region"
-          name="region-name"
+          name="region"
+          value={values.region}
+          onChange={handleInputChange("region")}
+          required
         />
       </div>
       <div className="input__item conditions address">
@@ -20,7 +33,10 @@ export function InputGroupLocation() {
           type="text"
           className="input__field conditions"
           id="address"
-          name="address-name"
+          name="address"
+          value={values.address}
+          onChange={handleInputChange("address")}
+          required
         />
       </div>
       <div className="input__item conditions">
@@ -31,7 +47,9 @@ export function InputGroupLocation() {
           type="text"
           className="input__field conditions"
           id="metro"
-          name="metro-name"
+          name="metro"
+          value={values.metro}
+          onChange={handleInputChange("metro")}
         />
       </div>
     </fieldset>

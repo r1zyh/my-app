@@ -1,8 +1,11 @@
+type TVacancyHeader = {
+  data: string;
+};
 
-export function VacancyHeader() {
+export function VacancyHeader({ data }: TVacancyHeader) {
   return (
     <div className="vacancy__header">
-      <span className="vacancy__date">Дата публикации: 23.01.2023</span>
+      <span className="vacancy__date">{data}</span>
       <button className="vacancy__edit">
         <img
           src="/src/assets/icons/Edit.svg"

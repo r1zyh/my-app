@@ -1,7 +1,8 @@
-import { useState } from "react";
+import { useFormikContext } from "formik";
+import { TOffer } from "../../../../state/type";
 
 export function GenderSelect() {
-  const [selectedGender, setSelectedGender] = useState("");
+  const { values, setFieldValue } = useFormikContext<TOffer>();
 
   return (
     <div className="input__item radio">
@@ -10,14 +11,14 @@ export function GenderSelect() {
         <label className="radio__option gender" htmlFor="male">
           <input
             type="radio"
-            name="gender-male"
+            name="gender"
             id="male"
-            value="male"
-            checked={selectedGender === "male"}
-            onChange={() => setSelectedGender("male")}
+            value="мужской"
+            checked={values.gender === "мужской"}
+            onChange={() => setFieldValue("gender", "мужской")}
           />
           <span className="custom__radio">
-            {selectedGender === "male" && (
+            {values.gender === "мужской" && (
               <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
             )}
           </span>
@@ -26,14 +27,14 @@ export function GenderSelect() {
         <label className="radio__option gender" htmlFor="female">
           <input
             type="radio"
-            name="gender-female"
+            name="gender"
             id="female"
-            value="female"
-            checked={selectedGender === "female"}
-            onChange={() => setSelectedGender("female")}
+            value="женский"
+            checked={values.gender === "женский"}
+            onChange={() => setFieldValue("gender", "женский")}
           />
           <span className="custom__radio">
-            {selectedGender === "female" && (
+            {values.gender === "женский" && (
               <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
             )}
           </span>

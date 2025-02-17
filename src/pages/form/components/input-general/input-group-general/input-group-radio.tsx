@@ -1,12 +1,16 @@
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent } from "react";
+import { useFormikContext } from "formik";
 import { GenderSelect } from "../../gender-select";
+import { TOffer } from "../../../../../state/type";
 
 export function InputGroupRadio() {
-  const [selectedValue, setSelectedValue] = useState("");
+  const { values, setFieldValue } = useFormikContext<TOffer>();
 
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
-    setSelectedValue(e.target.value);
+    const { value } = e.target;
+    setFieldValue("education", value);
   };
+
   return (
     <div className="input__group radio">
       <GenderSelect />
@@ -17,13 +21,14 @@ export function InputGroupRadio() {
 
         <select
           className={`input__field select ${
-            selectedValue === "" ? "placeholder" : ""
+            values.education === "" ? "placeholder" : ""
           }`}
           id="education"
-          defaultValue=""
+          value={values.education}
           onChange={handleSelectChange}
-          name="candidate-education"
-          title="candidate-education"
+          name="education"
+          title="education"
+          required
         >
           <option value="" hidden>
             Выберите

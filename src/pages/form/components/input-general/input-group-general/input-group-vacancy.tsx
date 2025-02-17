@@ -11,13 +11,13 @@ export function InputGroupVacancy() {
         <label htmlFor="vacancy" className="input__label">
           Наименование вакансии
         </label>
-        <input type="text" className="input__field" id="vacancy" name="vacancy-name" />
+        <input type="text" className="input__field" id="vacancy" name="vacancy-name" required/>
       </div>
       <div className="input__item">
         <label htmlFor="department" className="input__label">
           Отдел
         </label>
-        <input type="text" className="input__field" id="department" name="department-name"/>
+        <input type="text" className="input__field" id="department" name="department-name" required/>
       </div>
     </fieldset>
   );

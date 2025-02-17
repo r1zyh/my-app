@@ -1,11 +1,12 @@
 import { VacancyListItem } from "../vacancy-list-item/vacancy-list-item";
+import offers from "../../../../../mock/data.json";
 
 export function VacancyList() {
   return (
     <ul className="vacancy__list">
-      <VacancyListItem />
-      <VacancyListItem />
-      <VacancyListItem />
+      {offers.map((offer) => {
+        return <VacancyListItem offer={offer} key={offer.id} />;
+      })}
     </ul>
   );
 }

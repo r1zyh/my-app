@@ -1,6 +1,16 @@
+import { useFormikContext } from "formik";
 import { WorkTypeSelect } from "../../work-type-select";
+import { TOffer } from "../../../../../state/type";
 
 export function InputRadioConditions() {
+  const { values, setFieldValue } = useFormikContext<TOffer>();
+
+  const handleInputChange =
+    (field: string) =>
+    (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
+      setFieldValue(field, e.target.value);
+    };
+
   return (
     <div className="input__group radio conditions">
       <div className="input__item">
@@ -11,20 +21,23 @@ export function InputRadioConditions() {
           type="text"
           className="input__field"
           id="experience"
-          name="experience-name"
+          name="experience"
+          value={values.experience}
+          onChange={handleInputChange("experience")}
+          required
         />
       </div>
       <div className="input__item">
         <label htmlFor="work-schedule" className="input__label">
           График работы
         </label>
-
         <select
           className="input__field select placeholder"
           id="schedule"
-          defaultValue=""
-          name="work-schedule"
-          title="work-schedule"
+          name="schedule"
+          value={values.schedule}
+          onChange={handleInputChange("schedule")}
+          required
         >
           <option value="" hidden>
             Выберите
@@ -34,7 +47,7 @@ export function InputRadioConditions() {
           <option value="replaceable 2/2">Сменный 2/2</option>
         </select>
       </div>
-      <WorkTypeSelect />
+      <WorkTypeSelect />{" "}
     </div>
   );
 }

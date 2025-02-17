@@ -1,36 +1,122 @@
 [
-    {
-      "id": 1,
-      "date": "2023-01-23T00:00:00Z",
-      "name": "Backend-разработчик",
-      "salary": "70000",
-      "experience": {
-        "from": "1",
-        "to": "3"
-      },
-      "location": "Сходненская, Трикотажная и Волоколамская"
+  {
+    "id": 66612,
+    "jobTitle": "какая-то должность",
+    "vacancyName": "Backend-разработчик",
+    "department": "какой-то отдел",
+    "salary": "70000",
+    "salaryFromTo": {
+      "from": "50000",
+      "to": "70000"
     },
-    {
-      "id": 2,
-      "date": "2023-01-23T00:00:00Z",
-      "name": "Backend-разработчик",
-      "salary": "70000",
-      "experience": {
-        "from": "1",
-        "to": "3"
-      },
-      "location": "Сходненская, Трикотажная и Волоколамская"
+    "openDate": "2023-01-23T00:00:00Z",
+    "closeDate": "2023-02-23T00:00:00Z",
+    "gender": "женский",
+    "education": "Высшее",
+    "region": "какой-то регион",
+    "address": "Сходненская, Трикотажная и Волоколамская",
+    "metro": "Новослободская",
+    "experience": "3 года",
+    "experienceRequirements": {
+      "from": "1",
+      "to": "3"
     },
-    {
-      "id": 3,
-      "date": "2023-01-23T00:00:00Z",
-      "name": "Backend-разработчик",
-      "salary": "70000",
-      "experience": {
-        "from": "1",
-        "to": "3"
-      },
-      "location": "Сходненская, Трикотажная и Волоколамская"
-    }
-  ]
-  
+    "schedule": "5/2",
+    "employmentType": "Полный",
+    "duties": "АБВ",
+    "wishes": "ГДЕ",
+    "advantages": ["преимущество 1", "преимущество 2"]
+  },
+  {
+    "id": 12666,
+    "jobTitle": "какая-то должность",
+    "vacancyName": "Backend-разработчик",
+    "department": "какой-то отдел",
+    "salary": "70000",
+    "salaryFromTo": {
+      "from": "50000",
+      "to": "70000"
+    },
+    "openDate": "2023-01-23T00:00:00Z",
+    "closeDate": "2023-02-23T00:00:00Z",
+    "gender": "мужской",
+    "education": "Среднее",
+    "region": "какой-то регион",
+    "address": "какой-то адрес",
+    "metro": "Новослободская",
+    "experience": "3 года",
+    "experienceRequirements": {
+      "from": "3",
+      "to": "6"
+    },
+    "location": "Сходненская, Трикотажная и Волоколамская",
+    "schedule": "5/2",
+    "employmentType": "Полный",
+    "duties": "АБВ",
+    "wishes": "ГДЕ",
+    "advantages": [
+      "преимущество 1",
+      "преимущество 2",
+      "преимущество 2",
+      "преимущество 2"
+    ]
+  },
+  {
+    "id": 31169,
+    "jobTitle": "какая-то должность",
+    "vacancyName": "Backend-разработчик",
+    "department": "какой-то отдел",
+    "salary": "70000",
+    "salaryFromTo": {
+      "from": "50000",
+      "to": "70000"
+    },
+    "openDate": "2023-01-23T00:00:00Z",
+    "closeDate": "2023-02-23T00:00:00Z",
+    "gender": "мужской",
+    "education": "Высшее",
+    "region": "какой-то регион",
+    "address": "какой-то адрес",
+    "metro": "Новослободская",
+    "experience": "3 года",
+    "experienceRequirements": {
+      "from": "1",
+      "to": "3"
+    },
+    "location": "Сходненская, Трикотажная и Волоколамская",
+    "schedule": "5/2",
+    "employmentType": "Полный",
+    "duties": "АБВ",
+    "wishes": "ГДЕ",
+    "advantages": ["преимущество 1", "преимущество 2"]
+  },
+  {
+    "id": 55523,
+    "jobTitle": "какая-то должность",
+    "vacancyName": "Backend-разработчик",
+    "department": "какой-то отдел",
+    "salary": "90000",
+    "salaryFromTo": {
+      "from": "50000",
+      "to": "70000"
+    },
+    "openDate": "2023-01-23T00:00:00Z",
+    "closeDate": "2023-02-23T00:00:00Z",
+    "gender": "мужской",
+    "education": "Высшее",
+    "region": "какой-то регион",
+    "address": "какой-то адрес",
+    "metro": "Новослободская",
+    "experience": "3 года",
+    "experienceRequirements": {
+      "from": "1",
+      "to": "3"
+    },
+    "location": "Сходненская, Трикотажная и Волоколамская",
+    "schedule": "5/2",
+    "employmentType": "Полный",
+    "duties": "АБВ",
+    "wishes": "ГДЕ",
+    "advantages": ["преимущество 1", "преимущество 2", "преимущество 3"]
+  }
+]

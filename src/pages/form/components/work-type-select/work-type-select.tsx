@@ -1,4 +1,13 @@
+import { useFormikContext } from "formik";
+import { TOffer } from "../../../../state/type";
+
 export function WorkTypeSelect() {
+  const { values, setFieldValue } = useFormikContext<TOffer>();
+
+  const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFieldValue(e.target.name, e.target.value);
+  };
+
   return (
     <div className="input__item radio">
       <label className="input__label">Тип занятости</label>
@@ -6,43 +15,37 @@ export function WorkTypeSelect() {
         <label className="radio__option work" htmlFor="full-work">
           <input
             type="radio"
-            name="full-time-work"
+            name="employmentType"
             id="full-work"
             value="full-work"
+            checked={values.employmentType === "full-work"}
+            onChange={handleRadioChange}
           />
-          <span className="custom__radio">
-            {/* {selected === "male" && (
-                  <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
-                )} */}
-          </span>
+          <span className="custom__radio"></span>
           Полная занятость
         </label>
         <label className="radio__option work" htmlFor="part-work">
           <input
             type="radio"
-            name="part-time-work"
+            name="employmentType" // Привязка к полю в Formik
             id="part-work"
             value="part-work"
+            checked={values.employmentType === "part-work"}
+            onChange={handleRadioChange}
           />
-          <span className="custom__radio">
-            {/* {selectedGender === "female" && (
-                  <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
-                )} */}
-          </span>
+          <span className="custom__radio"></span>
           Частичная занятость
         </label>
         <label className="radio__option work" htmlFor="internship">
           <input
             type="radio"
-            name="internship-work"
+            name="employmentType" // Привязка к полю в Formik
             id="internship"
             value="internship"
+            checked={values.employmentType === "internship"}
+            onChange={handleRadioChange}
           />
-          <span className="custom__radio">
-            {/* {selected === "male" && (
-                  <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
-                )} */}
-          </span>
+          <span className="custom__radio"></span>
           Стажировка
         </label>
       </div>
