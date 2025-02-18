@@ -80,10 +80,10 @@
 body {
     background-color: #F3F7F8;
     font-size: 16px;
+    width: 1600px;
 }
 
 .container {
-    width: 1600px;
     padding: 0 150px;
 }
 
@@ -91,7 +91,12 @@ body {
 .header {
     background-color: #4C73E3;
     height: fit-content;
-    padding: 0 150px;
+    display: flex;
+    justify-content: center;
+}
+
+.header__container {
+    width: 1600px;
 }
 
 .navigation {
@@ -150,6 +155,7 @@ body {
     margin-bottom: 56px;
 }
 
+/* ширина списка вакансий */
 .vacancy {
     width: 1300px;
 }
@@ -566,11 +572,17 @@ input[type="date"]:not(.placeholder):valid {
 }
 
 @media (min-width: 1600px) {
-    
-    .container {
-     padding: 0 250px;
+
+
+    .header {
+        width: 100vw;
     }
-  .input__container {
-    width: 1600px;
-  }
+
+    .vacancy {
+        width: 1600px;
+    }
+  
+    .input__container {
+        width: 1600px;
+    }
 }
