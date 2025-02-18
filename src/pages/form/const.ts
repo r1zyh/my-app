@@ -17,8 +17,7 @@ export const validationSchema = Yup.object({
   education: Yup.string()
     .oneOf(["secondary", "higher"], "Выберите корректное образование")
     .required("Укажите образование"),
-  experience: Yup.string()
-    .required("Укажите опыт работы"),
+  experience: Yup.string().required("Укажите опыт работы"),
   schedule: Yup.string()
     .oneOf(
       ["full-day", "replaceable 5/2", "replaceable 2/2"],
@@ -37,3 +36,28 @@ export const validationSchema = Yup.object({
   advantages: Yup.string().optional(),
   suggestions: Yup.string().optional(),
 });
+
+export const initValueObj = {
+  vacancyName: "",
+  jobTitle: "",
+  department: "",
+  handsOrBills: "",
+  salaryFromTo: {
+    from: "",
+    to: "",
+  },
+  openDate: "",
+  closeDate: "",
+  gender: "",
+  region: "",
+  address: "",
+  metro: "",
+  education: "",
+  experience: "",
+  schedule: "",
+  employmentType: "",
+  duties: "",
+  wishes: "",
+  advantages: "",
+  suggestions: "",
+};

@@ -4,7 +4,7 @@ import { Container } from "../../components/page-container/page-container";
 import { InputConditions } from "./components/input-conditions";
 import { InputCriteria } from "./components/input-criteria";
 import { InputGeneral } from "./components/input-general";
-import { validationSchema } from "./const";
+import { initValueObj, validationSchema } from "./const";
 import { TOffer } from "../../state/type";
 import { useOffersContext } from "../../hooks/useOffersContext";
 import { useNavigate, useParams } from "react-router-dom";
@@ -15,30 +15,7 @@ export function VacancyForm() {
   const { state, dispatch } = useOffersContext();
   const { offerId } = useParams<{ offerId?: string }>();
   const navigate = useNavigate();
-  const [initialValues, setInitialValues] = useState<TOffer>({
-    vacancyName: "",
-    jobTitle: "",
-    department: "",
-    handsOrBills: "",
-    salaryFromTo: {
-      from: "",
-      to: "",
-    },
-    openDate: "",
-    closeDate: "",
-    gender: "",
-    region: "",
-    address: "",
-    metro: "",
-    education: "",
-    experience: "",
-    schedule: "",
-    employmentType: "",
-    duties: "",
-    wishes: "",
-    advantages: "",
-    suggestions: "",
-  });
+  const [initialValues, setInitialValues] = useState<TOffer>(initValueObj);
 
   useEffect(() => {
     if (offerId) {
@@ -72,6 +49,10 @@ export function VacancyForm() {
     navigate(AppRoute.Main);
   };
 
+  const handleReset = () => {
+    setInitialValues(initValueObj);
+  };
+
   return (
     <>
       <Header />
@@ -93,7 +74,7 @@ export function VacancyForm() {
             <button className="form__submit" type="submit">
               Отправить
             </button>
-            <button className="form__reset" type="reset">
+            <button className="form__reset" type="reset" onClick={handleReset}>
               Сбросить
             </button>
           </Form>
