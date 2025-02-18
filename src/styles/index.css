@@ -586,3 +586,27 @@ input[type="date"]:not(.placeholder):valid {
         width: 1600px;
     }
 }
+
+@media (max-width: 1440px) {
+
+
+    .header {
+        width: 100vw;
+    }
+
+    .header__container {
+        width: 1150px;
+    }
+
+    .vacancy {
+        width: 1150px;
+    }
+  
+    .input__container {
+        width: 1150px;
+    }
+
+    body {
+        width: 100vw;
+    }
+}
