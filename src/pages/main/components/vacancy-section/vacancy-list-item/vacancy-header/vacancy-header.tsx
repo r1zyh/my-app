@@ -1,5 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import { AppRoute } from "../../../../../../const";
+import EditIcon from '/src/assets/icons/Edit.svg';
+
 
 type TVacancyHeader = {
   data: string;
@@ -17,7 +19,7 @@ export function VacancyHeader({ data, offerId }: TVacancyHeader) {
       <span className="vacancy__date">{data}</span>
       <button type="button" className="vacancy__edit" onClick={handleEditClick}>
         <img
-          src="/src/assets/icons/Edit.svg"
+          src={EditIcon}
           alt="кнопка редактировать"
           className="vacancy__edit--icon"
         />
