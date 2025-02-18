@@ -1,6 +1,82 @@
 @import './normalize.css';
 
 
+@font-face {
+    font-family: 'PF Din Text Cond Pro';
+    src: url('/src/assets/fonts/PFDinTextCondProWoff2/PFDinTextCondPro-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PF Din Text Cond Pro';
+    src: url('/src/assets/fonts/PFDinTextCondProWoff2/PFDinTextCondPro-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSansHebrew';
+    src: url('/src/assets/fonts/OpenSansHebrewWoff2/OpenSansHebrew-Bold.ttf') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'OpenSansHebrew';
+    src: url('/src/assets/fonts/OpenSansHebrewWoff2/OpenSansHebrew-Regular.ttf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/src/assets/fonts/InterWoff2/18pt/Inter18pt-ExtraBold.woff2') format('woff2');
+    font-weight: bolder;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/src/assets/fonts/InterWoff2/18pt/Inter18pt-Bold.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/src/assets/fonts/InterWoff2/18pt/Inter18pt-SemiBold.woff2') format('woff2');
+    font-weight: semibold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/src/assets/fonts/InterWoff2/18pt/Inter18pt-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('/src/assets/fonts/InterWoff2/18pt/Inter18pt-Light.woff2') format('woff2');
+    font-weight: light;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
 body {
     background-color: #F3F7F8;
     font-size: 16px;
@@ -50,6 +126,7 @@ body {
 }
 
 .navigation__title {
+    font-family: 'OpenSansHebrew';
     font-size: 1.125em;
     font-weight: normal;
  
@@ -65,6 +142,7 @@ body {
 
 /*main*/
 .main__title {
+    font-family: "Inter";
     font-size: 2.25em;
     font-weight: normal;
     color: #4C73E3;
@@ -98,6 +176,8 @@ body {
 }
 
 .vacancy__date {
+    font-family: "Inter";
+    font-weight: normal;
     color: #4F4F55;
     font-size: 0.875em;
     line-height: 16.8px;
@@ -120,7 +200,8 @@ body {
 /* Название вакансии */
 
 .vacancy__inner--title {
-    font-weight: 700;
+    font-family: "Inter";
+    font-weight: bold;
     font-size: 25px;
     color: #4F4F55;
     margin-bottom: 12px;
@@ -140,6 +221,8 @@ body {
   }
 
 .vacancy__address {
+    font-family: "PF Din Text Cond Pro";
+    font-weight: normal;
     font-size: 1em;
     line-height: 19.2px;
     opacity: 0.8;
@@ -170,13 +253,16 @@ body {
 }
 
 .vacancy__salary strong {
+    font-family: "PF Din Text Cond Pro";
     font-size: 1.25em;
     line-height: 24px;
-    font-weight: 700;
+    font-weight: bold;
     color: #4C73E3;
 }
   
 .vacancy__experience strong {
+    font-family: "PF Din Text Cond Pro";
+    font-weight: bold;
     font-size: 1em;
     line-height: 16px;
     font-weight: 700;
@@ -184,6 +270,8 @@ body {
 }
 
 .vacancy__text {
+    font-family: "PF Din Text Cond Pro";
+    font-weight: normal;
     font-size: 0.875em;
     line-height: 16.8px;
     margin: 5px 0;
@@ -200,7 +288,8 @@ body {
 }
 
 .vacancy__metro--text {
-    font-weight: 400;
+    font-family: "PF Din Text Cond Pro";
+    font-weight: normal;
     line-height: 19.2px;
     color: #4F4F55;
     opacity: 0.8;

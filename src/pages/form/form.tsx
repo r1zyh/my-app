@@ -76,7 +76,9 @@ export function VacancyForm() {
     <>
       <Header />
       <Container>
-        <h1 className="main__title">Форма размещения заявки</h1>
+        <h1 className="main__title">
+          Форма {`${offerId ? "редактирования" : "размещение"}`} заявки
+        </h1>
         <Formik
           initialValues={initialValues}
           enableReinitialize={true}
