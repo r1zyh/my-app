@@ -1,5 +1,5 @@
 export type TOffer = {
-  id: string;
+  id?: string;
   jobTitle?: string;
   vacancyName: string;
   department: string;

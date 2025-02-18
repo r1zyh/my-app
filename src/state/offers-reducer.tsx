@@ -10,7 +10,7 @@ export const offersReducer = (
     case "UPDATE_OFFER":
       return {
         offers: state.offers.map((offer) =>
-          offer.id === action.offer.id ? action.offer : offer
+          offer.id === action.offer.id ? { ...offer, ...action.offer } : offer
         ),
       };
     default:

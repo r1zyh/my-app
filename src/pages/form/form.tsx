@@ -7,10 +7,15 @@ import { InputGeneral } from "./components/input-general";
 import { validationSchema } from "./const";
 import { TOffer } from "../../state/type";
 import { useOffersContext } from "../../hooks/useOffersContext";
+import { useNavigate, useParams } from "react-router-dom";
+import { AppRoute } from "../../const";
+import { useEffect, useState } from "react";
 
 export function VacancyForm() {
-  const { dispatch } = useOffersContext();
-  const initialValues = {
+  const { state, dispatch } = useOffersContext();
+  const { offerId } = useParams<{ offerId?: string }>();
+  const navigate = useNavigate();
+  const [initialValues, setInitialValues] = useState<TOffer>({
     vacancyName: "",
     jobTitle: "",
     department: "",
@@ -27,31 +32,44 @@ export function VacancyForm() {
     metro: "",
     education: "",
     experience: "",
-    // experienceRequirements: {
-    //   from: "",
-    //   to: "",
-    // },
     schedule: "",
     employmentType: "",
     duties: "",
     wishes: "",
     advantages: "",
     suggestions: "",
-  };
+  });
+
+  useEffect(() => {
+    if (offerId) {
+      const offer = state.offers.find((offer) => offer.id === offerId);
+      if (offer) {
+        setInitialValues(offer);
+      }
+    }
+  }, [offerId, state.offers]);
 
   const handleSubmit = (
     values: typeof initialValues,
     { resetForm }: { resetForm: () => void }
   ) => {
-    const newOffer: TOffer = {
-      id: (Math.random() * 1).toFixed(5),
-      ...values,
-    };
-    dispatch({
-      type: "ADD_OFFER",
-      offer: newOffer,
-    });
+    if (offerId) {
+      dispatch({
+        type: "UPDATE_OFFER",
+        offer: { ...values, id: offerId },
+      });
+    } else {
+      const newOffer: TOffer = {
+        id: (Math.random() * 1).toFixed(5),
+        ...values,
+      };
+      dispatch({
+        type: "ADD_OFFER",
+        offer: newOffer,
+      });
+    }
     resetForm();
+    navigate(AppRoute.Main);
   };
 
   return (
@@ -61,6 +79,7 @@ export function VacancyForm() {
         <h1 className="main__title">Форма размещения заявки</h1>
         <Formik
           initialValues={initialValues}
+          enableReinitialize={true}
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >

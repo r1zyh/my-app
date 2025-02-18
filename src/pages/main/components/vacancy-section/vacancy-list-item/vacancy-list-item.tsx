@@ -8,11 +8,12 @@ type TVacancyListItem = {
 };
 
 export function VacancyListItem({ offer }: TVacancyListItem) {
-  const { vacancyName, openDate, address, experience, salaryFromTo } = offer;
+  const { vacancyName, openDate, address, experience, salaryFromTo, id } = offer;
+  if (!id) throw new Error('Нет id !!')
   return (
     <li className="vacancy__list--item">
       <article className="vacancy__inner">
-        <VacancyHeader data={`Дата публикации: ${formatDate(openDate)}`} />
+        <VacancyHeader data={`Дата публикации: ${formatDate(openDate)}`} offerId={id} />
         <h2 className="vacancy__inner--title">{vacancyName}</h2>
 
         <div className="vacancy__location">

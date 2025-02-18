@@ -10,8 +10,10 @@ export function App() {
       <OffersProvider>
         <Routes>
           <Route path={AppRoute.Main} element={<Main />}></Route>
-          <Route path={AppRoute.Form} element={<VacancyForm/>}></Route>
-          <Route></Route>
+          <Route
+            path={`${AppRoute.Form}/:offerId?`}
+            element={<VacancyForm />}
+          ></Route>
         </Routes>
       </OffersProvider>
     </BrowserRouter>
