@@ -64,25 +64,17 @@ export function VacancyForm() {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          {({ errors, handleSubmit, values }) => (
-            <Form
-              onSubmit={(e) => {
-                e.preventDefault();
-                if (Object.keys(errors).length > 0) {
-                  console.error("Form errors:", errors);
-                } else {
-                  console.log(values);
-                  handleSubmit();
-                }
-              }}
-            >
-              <InputGeneral />
-              <InputConditions />
-              <InputCriteria />
-              <button className="form__submit" type="submit">Отправить</button>
-              <button className="form__reset" type="reset">Сбросить</button>
-            </Form>
-          )}
+          <Form>
+            <InputGeneral />
+            <InputConditions />
+            <InputCriteria />
+            <button className="form__submit" type="submit">
+              Отправить
+            </button>
+            <button className="form__reset" type="reset">
+              Сбросить
+            </button>
+          </Form>
         </Formik>
       </Container>
     </>
