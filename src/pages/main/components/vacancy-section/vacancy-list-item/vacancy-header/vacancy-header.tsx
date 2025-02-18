@@ -15,7 +15,7 @@ export function VacancyHeader({ data, offerId }: TVacancyHeader) {
   return (
     <div className="vacancy__header">
       <span className="vacancy__date">{data}</span>
-      <button className="vacancy__edit" onClick={handleEditClick}>
+      <button type="button" className="vacancy__edit" onClick={handleEditClick}>
         <img
           src="/src/assets/icons/Edit.svg"
           alt="кнопка редактировать"
