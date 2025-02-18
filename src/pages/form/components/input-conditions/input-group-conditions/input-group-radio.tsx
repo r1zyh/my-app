@@ -34,7 +34,9 @@ export function InputRadioConditions() {
           <span className="required__star">*</span>
         </label>
         <SelectWithError
-          className="input__field select placeholder"
+          className={`input__field select ${
+            values.schedule === "" ? "placeholder" : ""
+          }`}
           id="schedule"
           name="schedule"
           value={values.schedule}

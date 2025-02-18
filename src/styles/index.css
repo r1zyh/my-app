@@ -302,21 +302,19 @@ body {
 
 /* дата  */
 
+/* Общие стили для инпута */
 .input__date {
     width: 100%;
 }
 
-.input__date::placeholder {
-    color: #DCDCDC;
-  }
-
-.input__date::-webkit-datetime-edit {
+input[type="date"].placeholder {
     color: #DCDCDC;
 }
 
-.input__date::-moz-placeholder {
-    color: #DCDCDC;
+input[type="date"]:not(.placeholder):valid {
+    color: #000;
 }
+
 
 /* селект */
 

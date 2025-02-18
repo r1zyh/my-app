@@ -16,10 +16,12 @@ export function InputGroupSelect() {
         <div className="custom__date">
           <input
             type="date"
-            className="input__field input__date"
+            className={`input__field input__date ${
+              values.openDate === "" ? "placeholder" : ""
+            }`}
             id="open"
             name="openDate"
-            value={values.openDate ? values.openDate.slice(0, 10) : ""}  
+            value={values.openDate ? values.openDate.slice(0, 10) : ""}
             onChange={(e) => setFieldValue("openDate", e.target.value)}
           />
         </div>
@@ -36,7 +38,9 @@ export function InputGroupSelect() {
         <div className="custom__date">
           <input
             type="date"
-            className="input__field input__date"
+            className={`input__field input__date ${
+              values.closeDate === "" ? "placeholder" : ""
+            }`}
             id="close"
             name="closeDate"
             value={values.closeDate ? values.closeDate.slice(0, 10) : ""}
