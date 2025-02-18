@@ -4,6 +4,7 @@ import { InputWithError } from "../../../../components/errors";
 
 export function WorkTypeSelect() {
   const { values, setFieldValue, touched, errors } = useFormikContext<TOffer>();
+  const employmentError = touched.employmentType && errors.employmentType;
 
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFieldValue(e.target.name, e.target.value);
@@ -21,7 +22,6 @@ export function WorkTypeSelect() {
             value="full-work"
             checked={values.employmentType === "full-work"}
             onChange={handleRadioChange}
-            error={touched.employmentType && errors.employmentType}
           />
           <span className="custom__radio">
             {values.employmentType === "full-work" && (
@@ -38,7 +38,6 @@ export function WorkTypeSelect() {
             value="part-work"
             checked={values.employmentType === "part-work"}
             onChange={handleRadioChange}
-            error={touched.employmentType && errors.employmentType}
           />
           <span className="custom__radio">
             {values.employmentType === "part-work" && (
@@ -48,14 +47,13 @@ export function WorkTypeSelect() {
           Частичная занятость
         </label>
         <label className="radio__option work" htmlFor="internship">
-        <InputWithError
+          <InputWithError
             type="radio"
             name="employmentType"
             id="internship"
             value="internship"
             checked={values.employmentType === "internship"}
             onChange={handleRadioChange}
-            error={touched.employmentType && errors.employmentType}
           />
           <span className="custom__radio">
             {values.employmentType === "internship" && (
@@ -65,6 +63,7 @@ export function WorkTypeSelect() {
           Стажировка
         </label>
       </div>
+      <div className="error__message employment">{employmentError}</div>
     </div>
   );
 }

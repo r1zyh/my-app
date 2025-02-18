@@ -4,6 +4,7 @@ import { InputWithError } from "../../../../components/errors";
 
 export function GenderSelect() {
   const { values, setFieldValue, touched, errors } = useFormikContext<TOffer>();
+  const genderError = touched.gender && errors.gender;
 
   return (
     <div className="input__item radio">
@@ -17,7 +18,6 @@ export function GenderSelect() {
             value="мужской"
             checked={values.gender === "мужской"}
             onChange={() => setFieldValue("gender", "мужской")}
-            error={touched.gender && errors.gender}
           />
           <span className="custom__radio">
             {values.gender === "мужской" && (
@@ -34,7 +34,6 @@ export function GenderSelect() {
             value="женский"
             checked={values.gender === "женский"}
             onChange={() => setFieldValue("gender", "женский")}
-            error={touched.gender && errors.gender}
           />
           <span className="custom__radio">
             {values.gender === "женский" && (
@@ -44,6 +43,9 @@ export function GenderSelect() {
           Женский
         </label>
       </div>
+      {genderError && (
+        <div className="error__message gender">{genderError}</div>
+      )}
     </div>
   );
 }

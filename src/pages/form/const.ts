@@ -9,7 +9,7 @@ export const validationSchema = Yup.object({
     .min(Yup.ref("openDate"), "Дата закрытия должна быть позже даты открытия"),
   gender: Yup.string()
     .oneOf(["мужской", "женский"], "Выберите пол")
-    .required("Укажите пол"),
+    .required("Выберите пол"),
   region: Yup.string().required("Укажите регион"),
   address: Yup.string().required(
     "Введите полный адрес. Например, Походный проезд, 3с1"
@@ -27,7 +27,7 @@ export const validationSchema = Yup.object({
     .required("Укажите график работы"),
   employmentType: Yup.string()
     .oneOf(["full-work", "part-work", "internship"], "Выберите тип занятости")
-    .required("Тип занятости обязателен"),
+    .required("Выберите тип занятости"),
 
   // опционально
   metro: Yup.string().optional(),

@@ -419,6 +419,16 @@ body {
     font-weight: normal;
 }
 
+.error__message.gender {
+    margin-left: 8px;
+    margin-top: 16px;
+}
+
+.error__message.employment {
+    margin-left: 8px;
+    margin-top: 16px;
+}
+
 @media (min-width: 1600px) {
     
     .container {
