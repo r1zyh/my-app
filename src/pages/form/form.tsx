@@ -79,7 +79,8 @@ export function VacancyForm() {
               <InputGeneral />
               <InputConditions />
               <InputCriteria />
-              <button type="submit">Отправить</button>
+              <button className="form__submit" type="submit">Отправить</button>
+              <button className="form__reset" type="reset">Сбросить</button>
             </Form>
           )}
         </Formik>

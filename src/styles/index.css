@@ -439,6 +439,43 @@ body {
 
 }
 
+.form__submit {
+    color: white;
+    background-color: #4C73E3;
+    border: 1px solid #4C73E3;
+    padding: 16px;
+    border-radius: 26px;
+    width: 250px;
+    margin-right: 20px;
+    /* font-family: Inter; */
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 18.15px;
+    letter-spacing: 0%;
+    transition: all ease 0.3s
+}
+
+.form__submit:hover {
+    color: #4C73E3;
+    background-color: white;
+}
+
+
+.form__reset {
+    color: #4C73E3;
+    background-color: white;
+    border: 1px solid #4C73E3;
+    padding: 16px;
+    border-radius: 26px;
+    width: 250px;
+    /* font-family: Inter; */
+    font-weight: 800;
+    font-size: 15px;
+    line-height: 18.15px;
+    letter-spacing: 0%;
+    transition: all ease 0.3s
+}
+
 @media (min-width: 1600px) {
     
     .container {
