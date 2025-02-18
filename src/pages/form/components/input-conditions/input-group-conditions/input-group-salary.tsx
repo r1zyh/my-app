@@ -1,6 +1,6 @@
 import { useFormikContext } from "formik";
 import { TOffer } from "../../../../../state/type";
-
+import RadioButtonIcon from "/src/assets/icons/Radiobutton.svg";
 export function InputGroupSalary() {
   const { values, setFieldValue } = useFormikContext<TOffer>();
 
@@ -8,7 +8,10 @@ export function InputGroupSalary() {
     setFieldValue(e.target.name, e.target.value);
   };
 
-  const handleSalaryChange = (e: React.ChangeEvent<HTMLInputElement>, field: string) => {
+  const handleSalaryChange = (
+    e: React.ChangeEvent<HTMLInputElement>,
+    field: string
+  ) => {
     const value = e.target.value;
     setFieldValue(`salaryFromTo.${field}`, value);
   };
@@ -29,7 +32,7 @@ export function InputGroupSalary() {
             />
             <span className="custom__radio">
               {values.handsOrBills === "hands" && (
-                <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+                <img src={RadioButtonIcon} alt="выбрано" />
               )}
             </span>
             На руки
@@ -45,7 +48,7 @@ export function InputGroupSalary() {
             />
             <span className="custom__radio">
               {values.handsOrBills === "bills" && (
-                <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+                <img src={RadioButtonIcon} alt="выбрано" />
               )}
             </span>
             До вычета налогов

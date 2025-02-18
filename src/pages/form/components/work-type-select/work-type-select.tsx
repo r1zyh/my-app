@@ -1,6 +1,7 @@
 import { useFormikContext } from "formik";
 import { TOffer } from "../../../../state/type";
 import { InputWithError } from "../../../../components/errors";
+import RadioButtonIcon from '/src/assets/icons/Radiobutton.svg';
 
 export function WorkTypeSelect() {
   const { values, setFieldValue, touched, errors } = useFormikContext<TOffer>();
@@ -27,7 +28,7 @@ export function WorkTypeSelect() {
           />
           <span className="custom__radio">
             {values.employmentType === "full-work" && (
-              <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+              <img src={RadioButtonIcon} alt="выбрано" />
             )}
           </span>
           Полная занятость
@@ -43,7 +44,7 @@ export function WorkTypeSelect() {
           />
           <span className="custom__radio">
             {values.employmentType === "part-work" && (
-              <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+              <img src={RadioButtonIcon} alt="выбрано" />
             )}
           </span>
           Частичная занятость
@@ -59,7 +60,7 @@ export function WorkTypeSelect() {
           />
           <span className="custom__radio">
             {values.employmentType === "internship" && (
-              <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+              <img src={RadioButtonIcon} alt="выбрано" />
             )}
           </span>
           Стажировка

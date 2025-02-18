@@ -2,6 +2,7 @@ import { formatDate } from "../../../../../const";
 import { TOffer } from "../../../../../state/type";
 import { VacancyHeader } from "./vacancy-header";
 import { VacancyInfo } from "./vacancy-info/vacancy-info";
+import MapPinIcon from '/src/assets/icons/MapPin.svg'
 
 type TVacancyListItem = {
   offer: TOffer;
@@ -18,7 +19,7 @@ export function VacancyListItem({ offer }: TVacancyListItem) {
 
         <div className="vacancy__location">
           <img
-            src="/src/assets/icons/MapPin.svg"
+            src={MapPinIcon}
             alt="иконка адрес"
             className="vacancy__location--icon"
           />

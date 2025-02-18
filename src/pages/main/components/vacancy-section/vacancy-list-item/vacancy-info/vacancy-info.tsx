@@ -1,3 +1,5 @@
+import MetroIcon from "/src/assets/icons/Metro.svg";
+
 type TVacancyInfo = {
   salary?: {
     from: string;
@@ -32,11 +34,7 @@ export function VacancyInfo({
         </span>
 
         <div className="vacancy__metro">
-          <img
-            src="/src/assets/icons/Metro.svg"
-            alt="метро"
-            className="vacancy__metro-icon"
-          />
+          <img src={MetroIcon} alt="метро" className="vacancy__metro-icon" />
           <span className="vacancy__metro--text">{address}</span>
         </div>
       </div>

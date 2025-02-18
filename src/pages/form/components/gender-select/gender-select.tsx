@@ -1,6 +1,8 @@
 import { useFormikContext } from "formik";
 import { TOffer } from "../../../../state/type";
 import { InputWithError } from "../../../../components/errors";
+import RadioButtonIcon from '/src/assets/icons/Radiobutton.svg';
+
 
 export function GenderSelect() {
   const { values, setFieldValue, touched, errors } = useFormikContext<TOffer>();
@@ -23,7 +25,7 @@ export function GenderSelect() {
           />
           <span className="custom__radio">
             {values.gender === "мужской" && (
-              <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+              <img src={RadioButtonIcon} alt="выбрано" />
             )}
           </span>
           Мужской
@@ -39,7 +41,7 @@ export function GenderSelect() {
           />
           <span className="custom__radio">
             {values.gender === "женский" && (
-              <img src="/src/assets/icons/Radiobutton.svg" alt="выбрано" />
+              <img src={RadioButtonIcon} alt="выбрано" />
             )}
           </span>
           Женский
