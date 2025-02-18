@@ -155,6 +155,14 @@ body {
     margin-bottom: 56px;
 }
 
+.main__title--underline {
+    text-decoration: underline;
+    text-decoration-style: solid;
+    text-decoration-thickness: auto;
+    text-underline-offset: 8px;
+    color: #4C73E3;
+}  
+
 /* ширина списка вакансий */
 .vacancy {
     width: 1300px;

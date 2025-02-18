@@ -77,7 +77,8 @@ export function VacancyForm() {
       <Header />
       <Container>
         <h1 className="main__title">
-          Форма {`${offerId ? "редактирования" : "размещение"}`} заявки
+          Форма {`${offerId ? "редактирования" : "размещение"}`}{" "}
+          <span className="main__title--underline">заявки</span>
         </h1>
         <Formik
           initialValues={initialValues}
