@@ -1,5 +1,5 @@
 interface IInputWithErrorProps extends React.InputHTMLAttributes<HTMLInputElement> {
-    className: string;
+    className?: string;
     error?: string | false;
   }
   

@@ -2,9 +2,10 @@ import { ChangeEvent } from "react";
 import { useFormikContext } from "formik";
 import { GenderSelect } from "../../gender-select";
 import { TOffer } from "../../../../../state/type";
+import { SelectWithError } from "../../../../../components/errors";
 
 export function InputGroupRadio() {
-  const { values, setFieldValue } = useFormikContext<TOffer>();
+  const { values, setFieldValue, touched, errors } = useFormikContext<TOffer>();
 
   const handleSelectChange = (e: ChangeEvent<HTMLSelectElement>) => {
     const { value } = e.target;
@@ -19,7 +20,7 @@ export function InputGroupRadio() {
           Образование
         </label>
 
-        <select
+        <SelectWithError
           className={`input__field select ${
             values.education === "" ? "placeholder" : ""
           }`}
@@ -28,13 +29,14 @@ export function InputGroupRadio() {
           onChange={handleSelectChange}
           name="education"
           title="education"
+          error={touched.education && errors.education}
         >
           <option value="" hidden>
             Выберите
           </option>
           <option value="secondary">Среднее</option>
           <option value="higher">Высшее</option>
-        </select>
+        </SelectWithError>
       </div>
     </div>
   );

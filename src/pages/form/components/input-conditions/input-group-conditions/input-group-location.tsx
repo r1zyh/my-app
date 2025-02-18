@@ -1,8 +1,9 @@
 import { useFormikContext } from "formik";
 import { TOffer } from "../../../../../state/type";
+import { InputWithError } from "../../../../../components/errors/input-with-error";
 
 export function InputGroupLocation() {
-  const { values, setFieldValue } = useFormikContext<TOffer>();
+  const { values, setFieldValue, errors, touched } = useFormikContext<TOffer>();
 
   const handleInputChange =
     (field: string) => (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -15,26 +16,26 @@ export function InputGroupLocation() {
         <label htmlFor="region" className="input__label">
           Регион
         </label>
-        <input
-          type="text"
-          className="input__field conditions"
+        <InputWithError
           id="region"
           name="region"
           value={values.region}
           onChange={handleInputChange("region")}
+          error={touched.region && errors.region}
+          className="input__field conditions"
         />
       </div>
       <div className="input__item conditions address">
         <label htmlFor="address" className="input__label">
           Адрес
         </label>
-        <input
-          type="text"
-          className="input__field conditions"
+        <InputWithError
           id="address"
           name="address"
           value={values.address}
           onChange={handleInputChange("address")}
+          error={touched.address && errors.address}
+          className="input__field conditions"
         />
       </div>
       <div className="input__item conditions">

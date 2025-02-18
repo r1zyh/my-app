@@ -1,9 +1,11 @@
 import { useFormikContext } from "formik";
 import { WorkTypeSelect } from "../../work-type-select";
 import { TOffer } from "../../../../../state/type";
+import { InputWithError } from "../../../../../components/errors/input-with-error";
+import { SelectWithError } from "../../../../../components/errors";
 
 export function InputRadioConditions() {
-  const { values, setFieldValue } = useFormikContext<TOffer>();
+  const { values, setFieldValue, touched, errors } = useFormikContext<TOffer>();
 
   const handleInputChange =
     (field: string) =>
@@ -17,25 +19,26 @@ export function InputRadioConditions() {
         <label htmlFor="experience" className="input__label">
           Опыт работы
         </label>
-        <input
-          type="text"
-          className="input__field"
+        <InputWithError
           id="experience"
           name="experience"
           value={values.experience}
           onChange={handleInputChange("experience")}
+          error={touched.experience && errors.experience}
+          className="input__field"
         />
       </div>
       <div className="input__item">
         <label htmlFor="work-schedule" className="input__label">
           График работы
         </label>
-        <select
+        <SelectWithError
           className="input__field select placeholder"
           id="schedule"
           name="schedule"
           value={values.schedule}
           onChange={handleInputChange("schedule")}
+          error={touched.schedule && errors.schedule}
         >
           <option value="" hidden>
             Выберите
@@ -43,7 +46,7 @@ export function InputRadioConditions() {
           <option value="full-day">Полный день</option>
           <option value="replaceable 5/2">Сменный 5/2</option>
           <option value="replaceable 2/2">Сменный 2/2</option>
-        </select>
+        </SelectWithError>
       </div>
       <WorkTypeSelect />{" "}
     </div>

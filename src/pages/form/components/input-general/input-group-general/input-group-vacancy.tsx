@@ -1,5 +1,5 @@
 import { useFormikContext } from "formik";
-import { InputWithError } from "../../../../../components/error/error";
+import { InputWithError } from "../../../../../components/errors/input-with-error";
 import { TOffer } from "../../../../../state/type";
 
 export function InputGroupVacancy() {

@@ -1,8 +1,9 @@
 import { useFormikContext } from "formik";
 import { TOffer } from "../../../../state/type";
+import { InputWithError } from "../../../../components/errors";
 
 export function WorkTypeSelect() {
-  const { values, setFieldValue } = useFormikContext<TOffer>();
+  const { values, setFieldValue, touched, errors } = useFormikContext<TOffer>();
 
   const handleRadioChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setFieldValue(e.target.name, e.target.value);
@@ -13,13 +14,14 @@ export function WorkTypeSelect() {
       <label className="input__label">Тип занятости</label>
       <div className="radio__container work">
         <label className="radio__option work" htmlFor="full-work">
-          <input
+          <InputWithError
             type="radio"
             name="employmentType"
             id="full-work"
             value="full-work"
             checked={values.employmentType === "full-work"}
             onChange={handleRadioChange}
+            error={touched.employmentType && errors.employmentType}
           />
           <span className="custom__radio">
             {values.employmentType === "full-work" && (
@@ -29,13 +31,14 @@ export function WorkTypeSelect() {
           Полная занятость
         </label>
         <label className="radio__option work" htmlFor="part-work">
-          <input
+          <InputWithError
             type="radio"
             name="employmentType"
             id="part-work"
             value="part-work"
             checked={values.employmentType === "part-work"}
             onChange={handleRadioChange}
+            error={touched.employmentType && errors.employmentType}
           />
           <span className="custom__radio">
             {values.employmentType === "part-work" && (
@@ -45,13 +48,14 @@ export function WorkTypeSelect() {
           Частичная занятость
         </label>
         <label className="radio__option work" htmlFor="internship">
-          <input
+        <InputWithError
             type="radio"
             name="employmentType"
             id="internship"
             value="internship"
             checked={values.employmentType === "internship"}
             onChange={handleRadioChange}
+            error={touched.employmentType && errors.employmentType}
           />
           <span className="custom__radio">
             {values.employmentType === "internship" && (
