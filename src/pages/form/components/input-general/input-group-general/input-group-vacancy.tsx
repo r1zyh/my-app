@@ -23,6 +23,7 @@ export function InputGroupVacancy() {
       <div className="input__item">
         <label htmlFor="vacancy" className="input__label">
           Наименование вакансии
+          <span className="required__star">*</span>
         </label>
         <InputWithError
           id="vacancy"
@@ -36,6 +37,7 @@ export function InputGroupVacancy() {
       <div className="input__item">
         <label htmlFor="department" className="input__label">
           Отдел
+          <span className="required__star">*</span>
         </label>
         <InputWithError
           id="department"

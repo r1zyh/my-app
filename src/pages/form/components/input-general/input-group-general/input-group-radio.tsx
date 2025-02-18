@@ -18,6 +18,7 @@ export function InputGroupRadio() {
       <div className="input__item">
         <label htmlFor="education" className="input__label">
           Образование
+          <span className="required__star">*</span>
         </label>
 
         <SelectWithError

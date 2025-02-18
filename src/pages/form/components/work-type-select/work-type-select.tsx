@@ -12,7 +12,9 @@ export function WorkTypeSelect() {
 
   return (
     <div className="input__item radio">
-      <label className="input__label">Тип занятости</label>
+      <label className="input__label">
+        Тип занятости <span className="required__star">*</span>
+      </label>
       <div className="radio__container work">
         <label className="radio__option work" htmlFor="full-work">
           <InputWithError

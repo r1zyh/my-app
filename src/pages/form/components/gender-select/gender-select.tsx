@@ -8,7 +8,9 @@ export function GenderSelect() {
 
   return (
     <div className="input__item radio">
-      <label className="input__label">Пол</label>
+      <label className="input__label">
+        Пол <span className="required__star">*</span>
+      </label>
       <div className="radio__container gender">
         <label className="radio__option gender" htmlFor="male">
           <InputWithError

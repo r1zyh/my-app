@@ -15,6 +15,7 @@ export function InputGroupLocation() {
       <div className="input__item conditions">
         <label htmlFor="region" className="input__label">
           Регион
+          <span className="required__star">*</span>
         </label>
         <InputWithError
           id="region"
@@ -28,6 +29,7 @@ export function InputGroupLocation() {
       <div className="input__item conditions address">
         <label htmlFor="address" className="input__label">
           Адрес
+          <span className="required__star">*</span>
         </label>
         <InputWithError
           id="address"

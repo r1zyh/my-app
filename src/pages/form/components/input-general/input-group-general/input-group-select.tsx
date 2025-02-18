@@ -11,6 +11,7 @@ export function InputGroupSelect() {
       <div className="input__item">
         <label htmlFor="open" className="input__label">
           Дата открытия
+          <span className="required__star">*</span>
         </label>
         <div className="custom__date">
           <input
@@ -30,6 +31,7 @@ export function InputGroupSelect() {
       <div className="input__item">
         <label htmlFor="close" className="input__label">
           Плановая дата закрытия
+          <span className="required__star">*</span>
         </label>
         <div className="custom__date">
           <input

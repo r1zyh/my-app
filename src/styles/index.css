@@ -429,6 +429,16 @@ body {
     margin-top: 16px;
 }
 
+.required__star {
+    /* font-family: Inter; */
+    color: red;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16.94px;
+    letter-spacing: 0%;
+
+}
+
 @media (min-width: 1600px) {
     
     .container {

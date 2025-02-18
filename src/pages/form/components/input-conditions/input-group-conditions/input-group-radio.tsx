@@ -31,6 +31,7 @@ export function InputRadioConditions() {
       <div className="input__item">
         <label htmlFor="work-schedule" className="input__label">
           График работы
+          <span className="required__star">*</span>
         </label>
         <SelectWithError
           className="input__field select placeholder"
