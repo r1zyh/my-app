@@ -25,9 +25,14 @@ export const validationSchema = Yup.object({
     )
     .required("Укажите график работы"),
   employmentType: Yup.string()
-    .oneOf(
-      ["full-work", "part-work", "internship"],
-      "Выберите тип занятости"
-    )
+    .oneOf(["full-work", "part-work", "internship"], "Выберите тип занятости")
     .required("Тип занятости обязателен"),
+
+  // опционально
+  metro: Yup.string().optional(),
+  handsOrBills: Yup.string().optional(),
+  duties: Yup.string().optional(),
+  wishes: Yup.string().optional(),
+  advantages: Yup.string().optional(),
+  suggestions: Yup.string().optional(),
 });

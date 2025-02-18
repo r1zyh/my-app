@@ -31,12 +31,12 @@ export function VacancyForm() {
     //   from: "",
     //   to: "",
     // },
-    location: "",
     schedule: "",
     employmentType: "",
     duties: "",
     wishes: "",
-    advantages: [],
+    advantages: "",
+    suggestions: "",
   };
 
   const handleSubmit = (
@@ -44,7 +44,7 @@ export function VacancyForm() {
     { resetForm }: { resetForm: () => void }
   ) => {
     const newOffer: TOffer = {
-      id: +(Math.random() * 1).toFixed(5),
+      id: (Math.random() * 1).toFixed(5),
       ...values,
     };
     dispatch({
@@ -64,12 +64,24 @@ export function VacancyForm() {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          <Form>
-            <InputGeneral />
-            <InputConditions />
-            <InputCriteria />
-            <button type="submit">Отправить</button>
-          </Form>
+          {({ errors, handleSubmit, values }) => (
+            <Form
+              onSubmit={(e) => {
+                e.preventDefault();
+                if (Object.keys(errors).length > 0) {
+                  console.error("Form errors:", errors);
+                } else {
+                  console.log(values);
+                  handleSubmit();
+                }
+              }}
+            >
+              <InputGeneral />
+              <InputConditions />
+              <InputCriteria />
+              <button type="submit">Отправить</button>
+            </Form>
+          )}
         </Formik>
       </Container>
     </>

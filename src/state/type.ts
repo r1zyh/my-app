@@ -1,5 +1,5 @@
 export type TOffer = {
-  id: number;
+  id: string;
   jobTitle?: string;
   vacancyName: string;
   department: string;
@@ -24,7 +24,8 @@ export type TOffer = {
   employmentType: string;
   duties?: string;
   wishes?: string;
-  advantages?: string[];
+  advantages?: string;
+  suggestions?: string;
 };
 
 export type TOffersState = {
@@ -33,5 +34,4 @@ export type TOffersState = {
 
 export type TOffersAction =
   | { type: "ADD_OFFER"; offer: TOffer }
-  | { type: "UPDATE_OFFER"; offer: TOffer }
-  | { type: "DELETE_OFFER"; id: number };
+  | { type: "UPDATE_OFFER"; offer: TOffer };

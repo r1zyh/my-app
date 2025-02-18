@@ -13,10 +13,6 @@ export const offersReducer = (
           offer.id === action.offer.id ? action.offer : offer
         ),
       };
-    case "DELETE_OFFER":
-      return {
-        offers: state.offers.filter((offer) => offer.id !== action.id),
-      };
     default:
       return state;
   }
