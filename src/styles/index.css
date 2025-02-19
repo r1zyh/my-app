@@ -16,18 +16,10 @@
     font-style: normal;
     font-display: swap;
 }
-
+/* Не тот */
 @font-face {
     font-family: 'OpenSansHebrew';
-    src: url('/src/assets/fonts/OpenSansHebrewWoff2/OpenSansHebrew-Bold.ttf') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: 'OpenSansHebrew';
-    src: url('/src/assets/fonts/OpenSansHebrewWoff2/OpenSansHebrew-Regular.ttf') format('woff2');
+    src: url('/src/assets/fonts/OpenSansHebrewWoff2/OpenSans-Regular.woff2') format('woff2');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -536,7 +528,11 @@ input[type="date"]:not(.placeholder):valid {
 /* ошибка */
 
 .input__field.input__error {
-    border: 1px solid red;
+    outline: 1px solid red;
+}
+
+.input__field.input__error:hover {
+    outline: none;
 }
 
 .error__message {
@@ -577,6 +573,7 @@ input[type="date"]:not(.placeholder):valid {
     border-radius: 26px;
     width: 250px;
     margin-right: 20px;
+    margin-bottom: 106px;
     font-size: 15px;
     line-height: 18.15px;
     transition: all ease 0.3s

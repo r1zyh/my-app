@@ -49,10 +49,9 @@ export function VacancyForm() {
     navigate(AppRoute.Main);
   };
 
-  const handleReset = () => {
-    setInitialValues(initValueObj);
+  const handleReset = (resetForm: () => void) => {
+    resetForm();
   };
-
   return (
     <>
       <Header />
@@ -67,17 +66,23 @@ export function VacancyForm() {
           validationSchema={validationSchema}
           onSubmit={handleSubmit}
         >
-          <Form>
-            <InputGeneral />
-            <InputConditions />
-            <InputCriteria />
-            <button className="form__submit" type="submit">
-              Отправить
-            </button>
-            <button className="form__reset" type="reset" onClick={handleReset}>
-              Сбросить
-            </button>
-          </Form>
+          {({ resetForm }) => (
+            <Form>
+              <InputGeneral />
+              <InputConditions />
+              <InputCriteria />
+              <button className="form__submit" type="submit">
+                Отправить
+              </button>
+              <button
+                className="form__reset"
+                type="button"
+                onClick={() => handleReset(resetForm)}
+              >
+                {`${offerId ? 'Отменить' : 'Сбросить'}`}
+              </button>
+            </Form>
+          )}
         </Formik>
       </Container>
     </>
