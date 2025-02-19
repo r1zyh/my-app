@@ -389,6 +389,16 @@ body {
     outline: none;
 }
 
+.input__field:hover {
+    box-shadow: 0px 0px 3px 1px #35A500B2;
+    outline: none;
+}
+
+.input__field:focus {
+    box-shadow: none;
+}
+
+
 .input__field.criteria {
     height: 100px;
     width: 100%;
