@@ -598,3 +598,9 @@ input[type="date"]:not(.placeholder):valid {
     border-color: #88A7FF;
     background-color: white;
 }
+
+@media(max-width: 1600px) {
+    .container {
+        padding: 0 75px;
+    }
+}
