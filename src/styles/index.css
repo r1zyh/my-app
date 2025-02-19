@@ -80,11 +80,12 @@
 body {
     background-color: #F3F7F8;
     font-size: 16px;
-    width: 1600px;
 }
 
 .container {
-    padding: 0 150px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 /*header styles*/
@@ -96,7 +97,9 @@ body {
 }
 
 .header__container {
-    width: 1600px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
 }
 
 .navigation {
@@ -105,6 +108,10 @@ body {
     align-items: center;
     justify-content: space-between;
     position: relative;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 150px;
 }
 
 .navigation__list {
@@ -165,7 +172,9 @@ body {
 
 /* ширина списка вакансий */
 .vacancy {
-    width: 1300px;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
 }
 
 .vacancy__list {
@@ -510,6 +519,9 @@ input[type="date"]:not(.placeholder):valid {
 .input__item.conditions.address {
     width: 420px;
 }
+.input__field.conditions#address {
+    width: 420px;
+}
 
 /* ошибка */
 
@@ -518,6 +530,7 @@ input[type="date"]:not(.placeholder):valid {
 }
 
 .error__message {
+    font-family: "Inter";
     color: red;
     font-size: 0.875em;
     margin-top: 4px;
@@ -560,8 +573,9 @@ input[type="date"]:not(.placeholder):valid {
 }
 
 .form__submit:hover {
-    color: #4C73E3;
-    background-color: white;
+    color: white;
+    background-color: #88A7FF;
+    border-color: #88A7FF;
 }
 
 
@@ -573,48 +587,13 @@ input[type="date"]:not(.placeholder):valid {
     padding: 16px;
     border-radius: 26px;
     width: 250px;
-    font-weight: 600;
+    font-weight: bolder;
     font-size: 15px;
     line-height: 18.15px;
     transition: all ease 0.3s
 }
 
-@media (min-width: 1600px) {
-
-
-    .header {
-        width: 100vw;
-    }
-
-    .vacancy {
-        width: 1600px;
-    }
-  
-    .input__container {
-        width: 1600px;
-    }
-}
-
-@media (max-width: 1440px) {
-
-
-    .header {
-        width: 100vw;
-    }
-
-    .header__container {
-        width: 1150px;
-    }
-
-    .vacancy {
-        width: 1150px;
-    }
-  
-    .input__container {
-        width: 1150px;
-    }
-
-    body {
-        width: 100vw;
-    }
+.form__reset:hover {
+    color: #88A7FF;
+    border-color: #88A7FF;
 }

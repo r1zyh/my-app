@@ -15,7 +15,7 @@
     "education": "higher",
     "region": "какой-то регион",
     "address": "Сходненская, Трикотажная и Волоколамская",
-    "metro": "Новослободская",
+    "metro": "Ясенево",
     "experience": "3 года",
     "experienceRequirements": {
       "from": "1",
@@ -74,13 +74,12 @@
     "education": "higher",
     "region": "какой-то регион",
     "address": "какой-то адрес",
-    "metro": "Новослободская",
+    "metro": "Нахимовский проспект",
     "experience": "3 года",
     "experienceRequirements": {
       "from": "1",
       "to": "3"
     },
-    "location": "Сходненская, Трикотажная и Волоколамская",
     "schedule": "replaceable 5/2",
     "employmentType": "part-work",
     "duties": "АБВ",
@@ -110,7 +109,6 @@
       "from": "1",
       "to": "3"
     },
-    "location": "Сходненская, Трикотажная и Волоколамская",
     "schedule": "replaceable 2/2",
     "employmentType": "full-work",
     "duties": "АБВ",
