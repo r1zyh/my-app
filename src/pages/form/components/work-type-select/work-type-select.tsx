@@ -17,6 +17,7 @@ export function WorkTypeSelect() {
         Тип занятости <span className="required__star">*</span>
       </label>
       <div className="radio__container work">
+        
         <label className="radio__option work" htmlFor="full-work">
           <InputWithError
             type="radio"

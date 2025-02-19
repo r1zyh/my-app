@@ -10,7 +10,7 @@ export const InputWithError = ({
   ...props
 }: IInputWithErrorProps) => {
   return (
-    <div>
+    <>
       <input
         className={`${className ? className : "with__error"} ${
           error ? "input__error" : ""
@@ -20,6 +20,6 @@ export const InputWithError = ({
       {error && typeof error === "string" && (
         <div className="error__message">{error}</div>
       )}
-    </div>
+    </>
   );
 };

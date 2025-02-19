@@ -6,8 +6,8 @@
     "department": "какой-то отдел",
     "handsOrBills": "hands",
     "salaryFromTo": {
-      "from": "50000",
-      "to": "70000"
+      "from": "150000",
+      "to": "250000"
     },
     "openDate": "2025-02-19",
     "closeDate": "2025-03-19",
@@ -35,7 +35,7 @@
     "department": "какой-то отдел",
     "handsOrBills": "hands",
     "salaryFromTo": {
-      "from": "50000",
+      "from": "",
       "to": "70000"
     },
     "openDate": "2025-02-24",
@@ -94,7 +94,7 @@
     "department": "какой-то отдел",
     "handsOrBills": "bills",
     "salaryFromTo": {
-      "from": "50000",
+      "from": "40000",
       "to": "70000"
     },
     "openDate": "2025-01-10",
